@@ -27,6 +27,7 @@ This Python script is designed to send a series of POST requests to a specific U
 ## Requirements
 
 To use the python script, you need to run:
+
 ```
 pip install requests colorama
 ```
