@@ -10,7 +10,7 @@ from colorama import Fore, Style
 colorama.init()
 
 # Ask how many requests/links to make
-print("\033[95mDiscord Nitro Generator\033[0m by AholicKnight")
+print(f"{Fore.MAGENTA}Discord Nitro Generator{Style.RESET_ALL} by {Fore.RED}AholicKnight{Style.RESET_ALL}")
 num_requests = int(input("How many requests/links would you like to make? "))
 
 # URL to send POST requests to
