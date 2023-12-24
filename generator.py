@@ -9,8 +9,9 @@ from colorama import Fore, Style
 # Initialize colorama
 colorama.init()
 
-# Ask how many requests to make
-num_requests = int(input("How many requests would you like to make? "))
+# Ask how many requests/links to make
+print("\033[95mDiscord Nitro Generator\033[0m by AholicKnight")
+num_requests = int(input("How many requests/links would you like to make? "))
 
 # URL to send POST requests to
 url = "https://api.discord.gx.games/v1/direct-fulfillment"
@@ -47,10 +48,6 @@ with open("generatedcodes.txt", "w") as file:
             print(f"{Fore.YELLOW}You are being rate-limited!{Style.RESET_ALL}")
         else:
             print(f"{Fore.RED}Request failed : {response.status_code}{Style.RESET_ALL}")
-
-        # Update the console title with the animation
-        ctypes.windll.kernel32.SetConsoleTitleW(
-            f"Generating codes {animation_chars[i % len(animation_chars)]}.....({successful_requests})")
 
         # Print the animation and the number of successful requests to the console
         print(f"\rGenerating codes {animation_chars[i % len(animation_chars)]}.....({Fore.GREEN}{successful_requests}{Style.RESET_ALL}) out of {num_requests}", end="")
